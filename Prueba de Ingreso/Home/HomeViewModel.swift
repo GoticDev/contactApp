@@ -13,7 +13,7 @@ import ProgressHUD
 
 class HomeViewModel {
     
-    var contactList = CurrentValueSubject<[ContactListResponse], Never>([])
+    var contactList = CurrentValueSubject<[ContactListResponse], Error>([])
     var contactsStorageList = CurrentValueSubject<[ContactsStorage], Never>([])
     var filterList = CurrentValueSubject<[ContactListResponse], Never>([])
     var filterStorageList = CurrentValueSubject<[ContactsStorage], Never>([])

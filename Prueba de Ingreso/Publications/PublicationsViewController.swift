@@ -77,9 +77,10 @@ class PublicationsViewController: BaseViewController {
         publicationsViewModel.publicationList
             .sink { subs in
                 switch subs {
-                    
                 case .finished:
                     print("finished")
+                case .failure(let error):
+                    print(error.localizedDescription)
                 }
             } receiveValue: { [weak self] (response) in
                 self?.publicationList = response

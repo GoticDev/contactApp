@@ -11,7 +11,7 @@ import ProgressHUD
 
 class PublicationsViewModel {
     
-    var publicationList = CurrentValueSubject<[PublicationsResponse], Never>([])
+    var publicationList = CurrentValueSubject<[PublicationsResponse], Error>([])
     private var contactListService: ContactListServiceProtocol
     private var publicationsSubscription: AnyCancellable?
     var list: [PublicationsResponse]?
