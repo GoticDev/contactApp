@@ -17,7 +17,6 @@
 		BA43F86C28B2EC59007ADBEA /* Prueba_de_IngresoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F86B28B2EC59007ADBEA /* Prueba_de_IngresoTests.swift */; };
 		BA43F87628B2EC59007ADBEA /* Prueba_de_IngresoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F87528B2EC59007ADBEA /* Prueba_de_IngresoUITests.swift */; };
 		BA43F87828B2EC59007ADBEA /* Prueba_de_IngresoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F87728B2EC59007ADBEA /* Prueba_de_IngresoUITestsLaunchTests.swift */; };
-		BA43F88628B2EE46007ADBEA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BA43F88528B2EE46007ADBEA /* Alamofire */; };
 		BA43F88A28B2F7EF007ADBEA /* +Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F88928B2F7EF007ADBEA /* +Bundle.swift */; };
 		BA43F88C28B2FCD1007ADBEA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F88B28B2FCD1007ADBEA /* HomeViewModel.swift */; };
 		BA43F88E28B309AD007ADBEA /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F88D28B309AD007ADBEA /* HomeModel.swift */; };
@@ -100,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA43F88628B2EE46007ADBEA /* Alamofire in Frameworks */,
 				BA43F8BA28B3FDBB007ADBEA /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,7 +281,6 @@
 			);
 			name = "Prueba de Ingreso";
 			packageProductDependencies = (
-				BA43F88528B2EE46007ADBEA /* Alamofire */,
 				BA43F8B928B3FDBB007ADBEA /* ProgressHUD */,
 			);
 			productName = "Prueba de Ingreso";
@@ -359,7 +356,6 @@
 			);
 			mainGroup = BA43F84528B2EC56007ADBEA;
 			packageReferences = (
-				BA43F88428B2EE46007ADBEA /* XCRemoteSwiftPackageReference "Alamofire" */,
 				BA43F8B828B3FDBB007ADBEA /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = BA43F84F28B2EC56007ADBEA /* Products */;
@@ -772,14 +768,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		BA43F88428B2EE46007ADBEA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 		BA43F8B828B3FDBB007ADBEA /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
@@ -791,11 +779,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		BA43F88528B2EE46007ADBEA /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BA43F88428B2EE46007ADBEA /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
 		BA43F8B928B3FDBB007ADBEA /* ProgressHUD */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BA43F8B828B3FDBB007ADBEA /* XCRemoteSwiftPackageReference "ProgressHUD" */;
