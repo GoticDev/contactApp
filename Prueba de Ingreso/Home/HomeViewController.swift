@@ -38,6 +38,7 @@ class HomeViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.layoutIfNeeded()
+        self.searchController?.searchBar.text = ""
         creatingSearhBar()
     }
 
