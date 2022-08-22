@@ -34,6 +34,10 @@
 		BA43F8AA28B3336B007ADBEA /* PublicationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8A928B3336B007ADBEA /* PublicationsModel.swift */; };
 		BA43F8AD28B33956007ADBEA /* PublicationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8AB28B33956007ADBEA /* PublicationsTableViewCell.swift */; };
 		BA43F8AE28B33956007ADBEA /* PublicationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA43F8AC28B33956007ADBEA /* PublicationsTableViewCell.xib */; };
+		BA43F8B028B351D3007ADBEA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8AF28B351D3007ADBEA /* BaseViewController.swift */; };
+		BA43F8B228B3538C007ADBEA /* +UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8B128B3538C007ADBEA /* +UIColor.swift */; };
+		BA43F8B428B35EC0007ADBEA /* +UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8B328B35EC0007ADBEA /* +UIFont.swift */; };
+		BA43F8B628B362A1007ADBEA /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8B528B362A1007ADBEA /* +UIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +88,10 @@
 		BA43F8A928B3336B007ADBEA /* PublicationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsModel.swift; sourceTree = "<group>"; };
 		BA43F8AB28B33956007ADBEA /* PublicationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsTableViewCell.swift; sourceTree = "<group>"; };
 		BA43F8AC28B33956007ADBEA /* PublicationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicationsTableViewCell.xib; sourceTree = "<group>"; };
+		BA43F8AF28B351D3007ADBEA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BA43F8B128B3538C007ADBEA /* +UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIColor.swift"; sourceTree = "<group>"; };
+		BA43F8B328B35EC0007ADBEA /* +UIFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIFont.swift"; sourceTree = "<group>"; };
+		BA43F8B528B362A1007ADBEA /* +UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "+UIView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,11 +143,11 @@
 		BA43F85028B2EC56007ADBEA /* Prueba de Ingreso */ = {
 			isa = PBXGroup;
 			children = (
+				BA43F88728B2EFD3007ADBEA /* Main */,
 				BA43F88F28B30B0B007ADBEA /* Networking */,
 				BA43F89828B30E2B007ADBEA /* Services */,
 				BA43F8A228B32BE9007ADBEA /* Publications */,
 				BA43F8A028B3287B007ADBEA /* Home */,
-				BA43F88728B2EFD3007ADBEA /* Main */,
 				BA43F88828B2F7D7007ADBEA /* Extensions */,
 				BA43F85D28B2EC58007ADBEA /* Assets.xcassets */,
 				BA43F86228B2EC58007ADBEA /* Info.plist */,
@@ -171,6 +179,7 @@
 				BA43F85128B2EC56007ADBEA /* AppDelegate.swift */,
 				BA43F85328B2EC56007ADBEA /* SceneDelegate.swift */,
 				BA43F85F28B2EC58007ADBEA /* LaunchScreen.storyboard */,
+				BA43F8AF28B351D3007ADBEA /* BaseViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -179,6 +188,9 @@
 			isa = PBXGroup;
 			children = (
 				BA43F88928B2F7EF007ADBEA /* +Bundle.swift */,
+				BA43F8B128B3538C007ADBEA /* +UIColor.swift */,
+				BA43F8B328B35EC0007ADBEA /* +UIFont.swift */,
+				BA43F8B528B362A1007ADBEA /* +UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -380,8 +392,12 @@
 				BA43F8A528B32C82007ADBEA /* PublicationsViewController.swift in Sources */,
 				BA43F85628B2EC56007ADBEA /* HomeViewController.swift in Sources */,
 				BA43F89A28B30E44007ADBEA /* Services.swift in Sources */,
+				BA43F8B428B35EC0007ADBEA /* +UIFont.swift in Sources */,
 				BA43F8A828B32F0D007ADBEA /* PublicationsViewModel.swift in Sources */,
+				BA43F8B028B351D3007ADBEA /* BaseViewController.swift in Sources */,
 				BA43F88C28B2FCD1007ADBEA /* HomeViewModel.swift in Sources */,
+				BA43F8B228B3538C007ADBEA /* +UIColor.swift in Sources */,
+				BA43F8B628B362A1007ADBEA /* +UIView.swift in Sources */,
 				BA43F85228B2EC56007ADBEA /* AppDelegate.swift in Sources */,
 				BA43F88E28B309AD007ADBEA /* HomeModel.swift in Sources */,
 				BA43F89528B30BAE007ADBEA /* Endpoint.swift in Sources */,

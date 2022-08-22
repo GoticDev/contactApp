@@ -16,22 +16,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oky-oa-bqx">
-                                <rect key="frame" x="0.0" y="128" width="414" height="734"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oky-oa-bqx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List is empty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFn-aB-nja">
+                                <rect key="frame" x="131.5" y="433" width="151.5" height="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oky-oa-bqx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lh2-eq-N2F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oky-oa-bqx" secondAttribute="trailing" id="VG6-fD-SSy"/>
+                            <constraint firstItem="XFn-aB-nja" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kWC-rE-iPT"/>
+                            <constraint firstItem="XFn-aB-nja" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="l8z-AP-EQb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oky-oa-bqx" secondAttribute="bottom" id="mKN-FK-pLg"/>
-                            <constraint firstItem="oky-oa-bqx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="sGh-2W-A2D"/>
+                            <constraint firstItem="oky-oa-bqx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sGh-2W-A2D"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="S7w-cI-DZF"/>
                     <connections>
+                        <outlet property="emptyListLabel" destination="XFn-aB-nja" id="Rf9-EO-CKQ"/>
                         <outlet property="tableView" destination="oky-oa-bqx" id="dUV-b7-HIk"/>
                     </connections>
                 </viewController>

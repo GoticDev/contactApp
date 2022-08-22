@@ -14,12 +14,16 @@ class PublicationsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        setInitialLabel()
     }
 
     func publicationData(data: PublicationsResponse) {
         publicationTitle.text = data.title
         publicationDescription.text = data.body
+    }
+    
+    private func setInitialLabel() {
+        publicationTitle.textColor = .blue
     }
      
 }

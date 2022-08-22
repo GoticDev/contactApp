@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class PublicationsViewController: UIViewController {
+class PublicationsViewController: BaseViewController {
 
     @IBOutlet weak var contactName: UILabel!
     @IBOutlet weak var contactPhone: UILabel!
@@ -31,10 +31,22 @@ class PublicationsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInitialSetup()
         setContactData()
         registerTableView()
         publicationsViewModel.getPublications(userId: String(self.userId))
         bindingPublicactionList()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    private func setInitialSetup() {
+        contactName.textColor = .principalColor
+        contactName.font = .PI1
+        contactPhone.font = .PI2
+        contactEmail.font = .PI2
     }
     
     private func setContactData() {
