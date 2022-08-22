@@ -55,22 +55,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "013982EB-1F14-4C6C-A30A-0F83F4DAA789"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Prueba de Ingreso/Services/Services.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "getContactList()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "D895211A-10C1-4877-BE4F-30ABB5E87FA0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -226,6 +210,70 @@
             endingLineNumber = "48"
             landmarkName = "bindingList()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "652CBC1B-AF83-4E08-B7C8-3380552EE1F8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prueba de Ingreso/Publications/PublicationsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAFAE823-676C-495B-B9F0-95253FDC0EEE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Prueba de Ingreso/Publications/PublicationsViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "getPublications(userId:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "EAFAE823-676C-495B-B9F0-95253FDC0EEE - 7942c4bc22f46ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Prueba_de_Ingreso.PublicationsViewModel.getPublications(userId: Swift.String) -&gt; ()"
+                  moduleName = "Prueba de Ingreso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tismart/Desktop/Prueba%20de%20Ingreso/Prueba%20de%20Ingreso/Publications/PublicationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "111">
+               </Location>
+               <Location
+                  uuid = "EAFAE823-676C-495B-B9F0-95253FDC0EEE - 7942c4bc22f46ee"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Prueba_de_Ingreso.PublicationsViewModel.getPublications(userId: Swift.String) -&gt; ()"
+                  moduleName = "Prueba de Ingreso"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/tismart/Desktop/Prueba%20de%20Ingreso/Prueba%20de%20Ingreso/Publications/PublicationsViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "190">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

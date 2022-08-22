@@ -44,9 +44,9 @@ class HomeViewController: UIViewController {
             case .finished:
                 print("finished")
             }
-        } receiveValue: { response in
-            self.contactList = response
-            self.tableView.reloadData()
+        } receiveValue: { [weak self] (response) in
+            self?.contactList = response
+            self?.tableView.reloadData()
             print("refrescar tabla")
         }.store(in: &cancellables)
 
@@ -73,6 +73,9 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        let vc = PublicationsViewController()
+        vc.userId = contactList[indexPath.row].id
+        vc.contactList = contactList[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

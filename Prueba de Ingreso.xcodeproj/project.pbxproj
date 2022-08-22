@@ -28,6 +28,12 @@
 		BA43F89A28B30E44007ADBEA /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F89928B30E44007ADBEA /* Services.swift */; };
 		BA43F89D28B31ED6007ADBEA /* ContactListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F89B28B31ED6007ADBEA /* ContactListTableViewCell.swift */; };
 		BA43F89E28B31ED6007ADBEA /* ContactListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA43F89C28B31ED6007ADBEA /* ContactListTableViewCell.xib */; };
+		BA43F8A528B32C82007ADBEA /* PublicationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8A328B32C82007ADBEA /* PublicationsViewController.swift */; };
+		BA43F8A628B32C82007ADBEA /* PublicationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA43F8A428B32C82007ADBEA /* PublicationsViewController.xib */; };
+		BA43F8A828B32F0D007ADBEA /* PublicationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8A728B32F0D007ADBEA /* PublicationsViewModel.swift */; };
+		BA43F8AA28B3336B007ADBEA /* PublicationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8A928B3336B007ADBEA /* PublicationsModel.swift */; };
+		BA43F8AD28B33956007ADBEA /* PublicationsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8AB28B33956007ADBEA /* PublicationsTableViewCell.swift */; };
+		BA43F8AE28B33956007ADBEA /* PublicationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BA43F8AC28B33956007ADBEA /* PublicationsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,12 @@
 		BA43F89928B30E44007ADBEA /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		BA43F89B28B31ED6007ADBEA /* ContactListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewCell.swift; sourceTree = "<group>"; };
 		BA43F89C28B31ED6007ADBEA /* ContactListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactListTableViewCell.xib; sourceTree = "<group>"; };
+		BA43F8A328B32C82007ADBEA /* PublicationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsViewController.swift; sourceTree = "<group>"; };
+		BA43F8A428B32C82007ADBEA /* PublicationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicationsViewController.xib; sourceTree = "<group>"; };
+		BA43F8A728B32F0D007ADBEA /* PublicationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsViewModel.swift; sourceTree = "<group>"; };
+		BA43F8A928B3336B007ADBEA /* PublicationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsModel.swift; sourceTree = "<group>"; };
+		BA43F8AB28B33956007ADBEA /* PublicationsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationsTableViewCell.swift; sourceTree = "<group>"; };
+		BA43F8AC28B33956007ADBEA /* PublicationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicationsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,16 +135,12 @@
 		BA43F85028B2EC56007ADBEA /* Prueba de Ingreso */ = {
 			isa = PBXGroup;
 			children = (
-				BA43F88728B2EFD3007ADBEA /* Main */,
-				BA43F89828B30E2B007ADBEA /* Services */,
-				BA43F88828B2F7D7007ADBEA /* Extensions */,
 				BA43F88F28B30B0B007ADBEA /* Networking */,
-				BA43F85528B2EC56007ADBEA /* HomeViewController.swift */,
-				BA43F88B28B2FCD1007ADBEA /* HomeViewModel.swift */,
-				BA43F88D28B309AD007ADBEA /* HomeModel.swift */,
-				BA43F85728B2EC56007ADBEA /* Main.storyboard */,
-				BA43F89B28B31ED6007ADBEA /* ContactListTableViewCell.swift */,
-				BA43F89C28B31ED6007ADBEA /* ContactListTableViewCell.xib */,
+				BA43F89828B30E2B007ADBEA /* Services */,
+				BA43F8A228B32BE9007ADBEA /* Publications */,
+				BA43F8A028B3287B007ADBEA /* Home */,
+				BA43F88728B2EFD3007ADBEA /* Main */,
+				BA43F88828B2F7D7007ADBEA /* Extensions */,
 				BA43F85D28B2EC58007ADBEA /* Assets.xcassets */,
 				BA43F86228B2EC58007ADBEA /* Info.plist */,
 				BA43F85A28B2EC56007ADBEA /* Prueba_de_Ingreso.xcdatamodeld */,
@@ -192,6 +200,40 @@
 				BA43F89928B30E44007ADBEA /* Services.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		BA43F8A028B3287B007ADBEA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BA43F85528B2EC56007ADBEA /* HomeViewController.swift */,
+				BA43F88B28B2FCD1007ADBEA /* HomeViewModel.swift */,
+				BA43F88D28B309AD007ADBEA /* HomeModel.swift */,
+				BA43F85728B2EC56007ADBEA /* Main.storyboard */,
+				BA43F8A128B32BBF007ADBEA /* Cell */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BA43F8A128B32BBF007ADBEA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				BA43F89B28B31ED6007ADBEA /* ContactListTableViewCell.swift */,
+				BA43F89C28B31ED6007ADBEA /* ContactListTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		BA43F8A228B32BE9007ADBEA /* Publications */ = {
+			isa = PBXGroup;
+			children = (
+				BA43F8A328B32C82007ADBEA /* PublicationsViewController.swift */,
+				BA43F8A428B32C82007ADBEA /* PublicationsViewController.xib */,
+				BA43F8A728B32F0D007ADBEA /* PublicationsViewModel.swift */,
+				BA43F8A928B3336B007ADBEA /* PublicationsModel.swift */,
+				BA43F8AB28B33956007ADBEA /* PublicationsTableViewCell.swift */,
+				BA43F8AC28B33956007ADBEA /* PublicationsTableViewCell.xib */,
+			);
+			path = Publications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +349,8 @@
 				BA43F89E28B31ED6007ADBEA /* ContactListTableViewCell.xib in Resources */,
 				BA43F86128B2EC58007ADBEA /* LaunchScreen.storyboard in Resources */,
 				BA43F85E28B2EC58007ADBEA /* Assets.xcassets in Resources */,
+				BA43F8A628B32C82007ADBEA /* PublicationsViewController.xib in Resources */,
+				BA43F8AE28B33956007ADBEA /* PublicationsTableViewCell.xib in Resources */,
 				BA43F85928B2EC56007ADBEA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,8 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA43F8AA28B3336B007ADBEA /* PublicationsModel.swift in Sources */,
+				BA43F8A528B32C82007ADBEA /* PublicationsViewController.swift in Sources */,
 				BA43F85628B2EC56007ADBEA /* HomeViewController.swift in Sources */,
 				BA43F89A28B30E44007ADBEA /* Services.swift in Sources */,
+				BA43F8A828B32F0D007ADBEA /* PublicationsViewModel.swift in Sources */,
 				BA43F88C28B2FCD1007ADBEA /* HomeViewModel.swift in Sources */,
 				BA43F85228B2EC56007ADBEA /* AppDelegate.swift in Sources */,
 				BA43F88E28B309AD007ADBEA /* HomeModel.swift in Sources */,
@@ -342,6 +389,7 @@
 				BA43F85428B2EC56007ADBEA /* SceneDelegate.swift in Sources */,
 				BA43F89128B30B31007ADBEA /* NetWorkingManager.swift in Sources */,
 				BA43F88A28B2F7EF007ADBEA /* +Bundle.swift in Sources */,
+				BA43F8AD28B33956007ADBEA /* PublicationsTableViewCell.swift in Sources */,
 				BA43F89328B30B7C007ADBEA /* Request.swift in Sources */,
 				BA43F89D28B31ED6007ADBEA /* ContactListTableViewCell.swift in Sources */,
 				BA43F85C28B2EC56007ADBEA /* Prueba_de_Ingreso.xcdatamodeld in Sources */,

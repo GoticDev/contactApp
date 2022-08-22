@@ -11,6 +11,7 @@ import Combine
 protocol ContactListServiceProtocol {
     var networkManager: NetworkManagerProtocol { get }
     func getContactList() -> AnyPublisher<[ContactListResponse], Error>
+    func getPublications(userId: String) -> AnyPublisher<[PublicationsResponse], Error>
 }
 
 
@@ -30,9 +31,13 @@ struct ContactListServices: ContactListServiceProtocol {
     }
     
     func getContactList() -> AnyPublisher<[ContactListResponse], Error> {
-        var request = HTTPRequest<EmptyData, [ContactListResponse]>(endpoint: Endpoint.contacts)
+        let request = HTTPRequest<EmptyData, [ContactListResponse]>(endpoint: Endpoint.contacts)
         return self.networkManager.request(request)
     }
     
-    
+    func getPublications(userId: String) -> AnyPublisher<[PublicationsResponse], Error> {
+        var request = HTTPRequest<EmptyData, [PublicationsResponse]>(endpoint: Endpoint.publications)
+        request.queryItems = [URLQueryItem(name: "userId", value: "\(userId)")]
+        return self.networkManager.request(request)
+    }
 }

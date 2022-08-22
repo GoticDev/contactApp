@@ -39,5 +39,9 @@ extension Endpoint {
     static public var contacts: Endpoint {
         Endpoint(path: "users")
     }
+    
+    static public var publications: Endpoint {
+        Endpoint(path: "posts")
+    }
 
 }
