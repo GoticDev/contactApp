@@ -7,6 +7,7 @@
 
 import UIKit
 import Combine
+import CoreData
 
 class PublicationsViewController: BaseViewController {
 
@@ -18,6 +19,7 @@ class PublicationsViewController: BaseViewController {
     var publicationsViewModel = PublicationsViewModel(contactListService: ContactListServices.shared)
     var cancellables: Set<AnyCancellable> = []
     var contactList: ContactListResponse?
+    var contactStorageList: ContactsStorage?
     var publicationList: [PublicationsResponse] = [PublicationsResponse]()
     var userId: Int = 1
     
@@ -50,10 +52,17 @@ class PublicationsViewController: BaseViewController {
     }
     
     private func setContactData() {
-        guard let contactList = contactList else { return }
-        contactName.text = contactList.name
-        contactPhone.text = contactList.phone
-        contactEmail.text = contactList.email
+        if let contactList = contactList {
+            contactName.text = contactList.name
+            contactPhone.text = contactList.phone
+            contactEmail.text = contactList.email
+        } else if let contactStorageList = contactStorageList {
+            contactName.text = contactStorageList.name
+            contactPhone.text = contactStorageList.phone
+            contactEmail.text = contactStorageList.email
+        } else {
+            return }
+        
 
     }
     

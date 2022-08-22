@@ -38,6 +38,7 @@
 		BA43F8B228B3538C007ADBEA /* +UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8B128B3538C007ADBEA /* +UIColor.swift */; };
 		BA43F8B428B35EC0007ADBEA /* +UIFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8B328B35EC0007ADBEA /* +UIFont.swift */; };
 		BA43F8B628B362A1007ADBEA /* +UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA43F8B528B362A1007ADBEA /* +UIView.swift */; };
+		BA43F8BA28B3FDBB007ADBEA /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = BA43F8B928B3FDBB007ADBEA /* ProgressHUD */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA43F88628B2EE46007ADBEA /* Alamofire in Frameworks */,
+				BA43F8BA28B3FDBB007ADBEA /* ProgressHUD in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +145,7 @@
 		BA43F85028B2EC56007ADBEA /* Prueba de Ingreso */ = {
 			isa = PBXGroup;
 			children = (
+				BA43F8B728B3B6AD007ADBEA /* ContactCoreData */,
 				BA43F88728B2EFD3007ADBEA /* Main */,
 				BA43F88F28B30B0B007ADBEA /* Networking */,
 				BA43F89828B30E2B007ADBEA /* Services */,
@@ -151,7 +154,6 @@
 				BA43F88828B2F7D7007ADBEA /* Extensions */,
 				BA43F85D28B2EC58007ADBEA /* Assets.xcassets */,
 				BA43F86228B2EC58007ADBEA /* Info.plist */,
-				BA43F85A28B2EC56007ADBEA /* Prueba_de_Ingreso.xcdatamodeld */,
 			);
 			path = "Prueba de Ingreso";
 			sourceTree = "<group>";
@@ -242,10 +244,26 @@
 				BA43F8A428B32C82007ADBEA /* PublicationsViewController.xib */,
 				BA43F8A728B32F0D007ADBEA /* PublicationsViewModel.swift */,
 				BA43F8A928B3336B007ADBEA /* PublicationsModel.swift */,
+				BA43F8C328B40C2C007ADBEA /* PublicationsCell */,
+			);
+			path = Publications;
+			sourceTree = "<group>";
+		};
+		BA43F8B728B3B6AD007ADBEA /* ContactCoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BA43F85A28B2EC56007ADBEA /* Prueba_de_Ingreso.xcdatamodeld */,
+			);
+			path = ContactCoreData;
+			sourceTree = "<group>";
+		};
+		BA43F8C328B40C2C007ADBEA /* PublicationsCell */ = {
+			isa = PBXGroup;
+			children = (
 				BA43F8AB28B33956007ADBEA /* PublicationsTableViewCell.swift */,
 				BA43F8AC28B33956007ADBEA /* PublicationsTableViewCell.xib */,
 			);
-			path = Publications;
+			path = PublicationsCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +284,7 @@
 			name = "Prueba de Ingreso";
 			packageProductDependencies = (
 				BA43F88528B2EE46007ADBEA /* Alamofire */,
+				BA43F8B928B3FDBB007ADBEA /* ProgressHUD */,
 			);
 			productName = "Prueba de Ingreso";
 			productReference = BA43F84E28B2EC56007ADBEA /* Prueba de Ingreso.app */;
@@ -341,6 +360,7 @@
 			mainGroup = BA43F84528B2EC56007ADBEA;
 			packageReferences = (
 				BA43F88428B2EE46007ADBEA /* XCRemoteSwiftPackageReference "Alamofire" */,
+				BA43F8B828B3FDBB007ADBEA /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = BA43F84F28B2EC56007ADBEA /* Products */;
 			projectDirPath = "";
@@ -760,6 +780,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		BA43F8B828B3FDBB007ADBEA /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -767,6 +795,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BA43F88428B2EE46007ADBEA /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		BA43F8B928B3FDBB007ADBEA /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BA43F8B828B3FDBB007ADBEA /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 

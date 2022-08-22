@@ -48,19 +48,29 @@ class HomeViewController: BaseViewController {
     }
     
     private func bindingList() {
-        homeViewModel.contactList.sink { subs in
-            switch subs {
-                
-            case .finished:
-                print("finished")
-                
-            }
-        } receiveValue: { [weak self] (response) in
-            guard let self = self else { return }
-            self.contactList = response
-            self.tableView.reloadData()
-        }.store(in: &cancellables)
-
+        if homeViewModel.contacsStorage.count > 0 {
+            homeViewModel.contactsStorageList.sink { subs in
+                switch subs {
+                case .finished:
+                    print("finished")
+                }
+            } receiveValue: { [weak self] (response) in
+                guard let self = self else { return }
+                self.tableView.reloadData()
+            }.store(in: &cancellables)
+            
+        } else {
+            homeViewModel.contactList.sink { subs in
+                switch subs {
+                case .finished:
+                    print("finished")
+                }
+            } receiveValue: { [weak self] (response) in
+                guard let self = self else { return }
+                self.contactList = response
+                self.tableView.reloadData()
+            }.store(in: &cancellables)
+        }
     }
     
     private func registerTableView() {
@@ -88,31 +98,69 @@ class HomeViewController: BaseViewController {
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactListTableViewCell", for: indexPath) as? ContactListTableViewCell else { return UITableViewCell() }
-        if (self.searchController?.searchBar.isFirstResponder ?? false) {
-            cell.contactData(data: homeViewModel.filterList.value[indexPath.row])
+        let isStoraged = UserDefaults.standard.bool(forKey: "storaged")
+        
+        if isStoraged {
+            if (self.searchController?.searchBar.isFirstResponder ?? false) {
+                cell.contactStorageData(data: homeViewModel.filterStorageList.value[indexPath.row])
+            } else {
+                cell.contactStorageData(data: homeViewModel.contactsStorageList.value[indexPath.row])
+            }
+            
         } else {
-            cell.contactData(data: homeViewModel.contactList.value[indexPath.row])
+            if (self.searchController?.searchBar.isFirstResponder ?? false) {
+                cell.contactData(data: homeViewModel.filterList.value[indexPath.row])
+            } else {
+                cell.contactData(data: homeViewModel.contactList.value[indexPath.row])
+            }
         }
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return contactList.count
+        let isStoraged = UserDefaults.standard.bool(forKey: "storaged")
         
-        if (self.searchController?.searchBar.isFirstResponder ?? false) {
-            return homeViewModel.filterList.value.count
-//        } else if self.homeViewModel.isFilter {
-//            return homeViewModel.contactList.value.count
+        if isStoraged {
+            if (self.searchController?.searchBar.isFirstResponder ?? false) {
+                return homeViewModel.filterStorageList.value.count
+            } else {
+                return homeViewModel.contactsStorageList.value.count
+            }
         } else {
-            return homeViewModel.contactList.value.count
+            if (self.searchController?.searchBar.isFirstResponder ?? false) {
+                return homeViewModel.filterList.value.count
+            } else {
+                return homeViewModel.contactList.value.count
+            }
         }
+        
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = PublicationsViewController()
-        vc.userId = contactList[indexPath.row].id
-        vc.contactList = contactList[indexPath.row]
+        let isStoraged = UserDefaults.standard.bool(forKey: "storaged")
+        
+        if isStoraged {
+            if (self.searchController?.searchBar.isFirstResponder ?? false) {
+                vc.userId = Int(homeViewModel.filterStorageList.value[indexPath.row].id)
+                vc.contactStorageList = homeViewModel.filterStorageList.value[indexPath.row]
+            } else {
+                vc.userId = Int(homeViewModel.contactsStorageList.value[indexPath.row].id)
+                vc.contactStorageList = homeViewModel.contactsStorageList.value[indexPath.row]
+            }
+        } else {
+            if (self.searchController?.searchBar.isFirstResponder ?? false) {
+                vc.userId = homeViewModel.filterList.value[indexPath.row].id
+                vc.contactList = homeViewModel.filterList.value[indexPath.row]
+            } else {
+                vc.userId = homeViewModel.contactList.value[indexPath.row].id
+                vc.contactList = homeViewModel.contactList.value[indexPath.row]
+            }
+            
+        }
+        
         self.searchController?.searchBar.isHidden = true
         navigationController?.pushViewController(vc, animated: true)
     }
@@ -121,13 +169,26 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 extension HomeViewController: UISearchBarDelegate, UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         self.homeViewModel.filter(text: self.searchController?.searchBar.text!.lowercased() ?? "")
-        if self.homeViewModel.filterList.value.count == 0 {
-            self.emptyListLabel.isHidden = false
-            self.tableView.isHidden = true
+        let isStoraged = UserDefaults.standard.bool(forKey: "storaged")
+        if isStoraged {
+            if self.homeViewModel.filterStorageList.value.count == 0 {
+                self.emptyListLabel.isHidden = false
+                self.tableView.isHidden = true
+            } else {
+                self.emptyListLabel.isHidden = true
+                self.tableView.isHidden = false
+                self.tableView.reloadData()
+            }
         } else {
-            self.emptyListLabel.isHidden = true
-            self.tableView.isHidden = false
-            self.tableView.reloadData()
+            if self.homeViewModel.filterList.value.count == 0 {
+                self.emptyListLabel.isHidden = false
+                self.tableView.isHidden = true
+            } else {
+                self.emptyListLabel.isHidden = true
+                self.tableView.isHidden = false
+                self.tableView.reloadData()
+            }
         }
+        
     }
 }

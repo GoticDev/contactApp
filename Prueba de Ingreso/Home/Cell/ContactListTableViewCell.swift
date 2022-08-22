@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ContactListTableViewCell: UITableViewCell {
     
@@ -30,6 +31,12 @@ class ContactListTableViewCell: UITableViewCell {
         contactEmail.text = data.email
     }
     
+    func contactStorageData(data: ContactsStorage) {
+        contactName.text = data.name
+        contactNumber.text = data.phone
+        contactEmail.text = data.email
+    }
+    
     private func setIcons() {
         phoneIcon.image = UIImage(systemName: "phone.fill")
         emailIcon.image = UIImage(systemName: "envelope.fill")
@@ -45,7 +52,6 @@ class ContactListTableViewCell: UITableViewCell {
     }
     
     private func roundCell() {
-        
         contentCell.layer.cornerRadius = 4
         contentCell.dropShadow(color: .gray, offSet: CGSize(width: 2, height: 1))
     }
